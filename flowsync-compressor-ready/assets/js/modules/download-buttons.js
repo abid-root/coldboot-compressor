@@ -1,15 +1,26 @@
-import { downloadAll } from "./downloads.js";
+import { downloadAllImages, downloadZip } from "./downloads.js";
 import { clearResults } from "./results.js";
 
 export function initDownloadButtons(){
-  ["tinyDownloadTop", "tinyDownloadBottom", "tinyZipTop", "tinyZipBottom"].forEach(id => {
+  ["tinyDownloadTop", "tinyDownloadBottom"].forEach(id => {
     const button = document.getElementById(id);
     if(!button) return;
 
     button.disabled = true;
     button.addEventListener("click", event => {
       event.preventDefault();
-      downloadAll();
+      downloadAllImages();
+    });
+  });
+
+  ["tinyZipTop", "tinyZipBottom"].forEach(id => {
+    const button = document.getElementById(id);
+    if(!button) return;
+
+    button.disabled = true;
+    button.addEventListener("click", event => {
+      event.preventDefault();
+      downloadZip();
     });
   });
 

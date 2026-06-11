@@ -9,15 +9,15 @@
   "theme_color": "#06090f",
   "icons": [
     {
-      "src": "assets/common/favicon-192.png",
+      "src": "assets/common/blackone.webp",
       "sizes": "192x192",
-      "type": "image/png",
+      "type": "image/webp",
       "purpose": "any maskable"
     },
     {
-      "src": "assets/common/favicon-512.png",
+      "src": "assets/common/blackone.webp",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/webp",
       "purpose": "any maskable"
     }
   ]

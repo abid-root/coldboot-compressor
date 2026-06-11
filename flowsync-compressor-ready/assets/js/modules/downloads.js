@@ -155,7 +155,7 @@ async function createZipBlob(files){
   return new Blob([localFiles, centralDirectory, endRecord], { type:"application/zip" });
 }
 
-export async function downloadAll(){
+export async function downloadZip(){
   const readyFiles = getReadyFiles();
 
   if(!readyFiles.length){
@@ -176,9 +176,25 @@ export async function downloadAll(){
 
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }catch(error){
-    readyFiles.forEach((file, index) => {
-      const realIndex = processedFiles.indexOf(file);
-      setTimeout(() => downloadItem(realIndex), index * 180);
-    });
+    alert("ZIP download failed. Try Download all images instead.");
   }
+}
+
+export function downloadAllImages(){
+  const readyFiles = getReadyFiles();
+
+  if(!readyFiles.length){
+    alert("No optimized files are ready yet.");
+    return;
+  }
+
+  readyFiles.forEach((file, index) => {
+    const realIndex = processedFiles.indexOf(file);
+    setTimeout(() => downloadItem(realIndex), index * 180);
+  });
+}
+
+/* Backward compatibility for older buttons/scripts. */
+export async function downloadAll(){
+  return downloadZip();
 }
