@@ -1,9 +1,9 @@
 {
   "name": "FlowSync Image Compressor",
-  "short_name": "FlowSync Compressor",
+  "short_name": "FlowSync",
   "description": "Compress JPG, PNG and WebP images directly in your browser. No backend, no uploads, private and fast.",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": ".",
+  "scope": ".",
   "display": "standalone",
   "background_color": "#06090f",
   "theme_color": "#06090f",
@@ -15,7 +15,7 @@
       "purpose": "any maskable"
     },
     {
-      "src": "assets/common/favicon-192.png",
+      "src": "assets/common/favicon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
