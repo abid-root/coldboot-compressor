@@ -155,7 +155,7 @@ function renderRows(accepted, rejected) {
         </div>
         <div class="tiny-file-select-wrap">
           <select class="tiny-file-format" disabled>
-            <option>—</option>
+            <option>— </option>
           </select>
         </div>
         <div class="tiny-file-saving tiny-file-saving-muted">Skipped<small>${reason}</small></div>
