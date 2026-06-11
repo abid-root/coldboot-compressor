@@ -1,0 +1,370 @@
+/* Results */
+.tinypng-results{
+  width:min(1020px, calc(100% - 120px));
+  margin:42px auto 86px;
+  display:none;
+  border:1px solid rgba(11,11,11,.28);
+  background:var(--ink);
+  color:var(--paper);
+  scroll-margin-top:128px;
+}
+
+html.dark .tinypng-results{
+  border-color:rgba(244,241,232,.32);
+}
+
+.tinypng-results.is-active{
+  display:block;
+}
+
+.tiny-status-head{
+  min-height:72px;
+  padding:18px 26px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  background:#101010;
+}
+
+.tiny-status-head h2{
+  margin:0;
+  color:var(--acid);
+  font-size:24px;
+  line-height:1.08;
+  font-weight:950;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+}
+
+.tiny-status-head p{
+  margin:4px 0 0;
+  color:var(--paper);
+  font-size:13px;
+  font-weight:900;
+}
+
+.tiny-status-head u{
+  font-weight:950;
+  text-underline-offset:2px;
+}
+
+.tiny-progress-badge{
+  min-width:66px;
+  height:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(255,255,255,.36);
+  font-weight:950;
+}
+
+body.has-result .tiny-progress-badge{
+  display:none;
+}
+
+.tiny-done-actions{
+  display:none;
+  align-items:center;
+  gap:8px;
+}
+
+body.has-result .tiny-done-actions{
+  display:flex;
+}
+
+.tiny-download-all,
+.tiny-icon-btn{
+  height:34px;
+  min-height:34px;
+  border:0;
+  background:var(--acid);
+  color:var(--ink);
+  font-size:12px;
+}
+
+.tiny-download-all{
+  padding:0 24px;
+}
+
+.tiny-icon-btn{
+  width:58px;
+  padding:0 10px;
+}
+
+.tiny-file-list{
+  background:rgba(255,255,255,.95);
+  color:var(--ink);
+}
+
+html.dark .tiny-file-list{
+  background:rgba(244,241,232,.95);
+}
+
+.tiny-file-row{
+  min-height:72px;
+  padding:13px 26px;
+  display:grid;
+  grid-template-columns:46px 1fr 140px 120px 52px;
+  align-items:center;
+  gap:14px;
+  border-top:1px solid rgba(0,0,0,.16);
+}
+
+.tiny-thumb{
+  width:36px;
+  height:36px;
+  object-fit:cover;
+  border:1px solid rgba(0,0,0,.16);
+}
+
+.tiny-file-name{
+  color:var(--ink);
+  font-size:14px;
+  font-weight:950;
+}
+
+.tiny-file-meta{
+  margin-top:3px;
+  display:flex;
+  gap:8px;
+  color:#666;
+  font-size:12px;
+}
+
+.tiny-file-type{
+  color:var(--teal);
+  font-weight:950;
+}
+
+.tiny-file-saving{
+  color:var(--ink);
+  text-align:right;
+  font-size:14px;
+  font-weight:950;
+}
+
+.tiny-file-saving small{
+  display:block;
+  color:#666;
+  font-size:11px;
+}
+
+.tiny-file-action{
+  min-width:62px;
+  padding:7px 10px;
+  border:0;
+  background:rgba(0,139,122,.1);
+  color:var(--teal);
+  font-size:11px;
+  font-weight:950;
+}
+
+.tiny-file-action.is-waiting{
+  background:transparent;
+  color:#333;
+}
+
+.tiny-file-progress{
+  grid-column:2 / 6;
+  height:2px;
+  background:rgba(0,0,0,.08);
+}
+
+.tiny-file-progress span{
+  display:block;
+  width:0;
+  height:100%;
+  background:var(--teal);
+}
+
+.tiny-bottom-bar{
+  display:none;
+}
+
+body.has-result .tiny-bottom-bar{
+  min-height:36px;
+  padding:4px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  background:var(--ink);
+}
+
+.tiny-bottom-bar span{
+  margin-right:8px;
+  color:var(--paper);
+  font-size:12px;
+  font-weight:950;
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+
+.tiny-clear-all{
+  height:30px;
+  min-height:30px;
+  padding:0 16px;
+  border:1px solid var(--acid);
+  background:transparent;
+  color:var(--acid);
+  font-size:12px;
+}
+
+.tiny-clear-all:hover{
+  background:var(--acid);
+  color:var(--ink);
+}
+
+/* Deploy-ready browser logic states */
+.tiny-file-row.is-skipped{
+  opacity:.78;
+}
+
+.tiny-thumb-fallback{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,.08);
+  color:#666;
+  font-size:10px;
+  font-weight:950;
+}
+
+.tiny-file-saving-muted{
+  color:#666;
+}
+
+.tiny-file-saving small{
+  line-height:1.25;
+}
+
+.tiny-file-action:disabled{
+  cursor:not-allowed;
+  opacity:.62;
+}
+
+.tiny-file-action.is-disabled{
+  background:rgba(0,0,0,.06);
+  color:#666;
+}
+
+.tiny-download-all:disabled,
+.tiny-icon-btn:disabled{
+  cursor:not-allowed;
+  opacity:.55;
+}
+
+
+/* Per-row format dropdown */
+.tiny-file-select-wrap{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.tiny-file-format{
+  width:120px;
+  height:36px;
+  min-height:36px;
+  padding:0 10px;
+  border:1px solid rgba(0,0,0,.12);
+  background:rgba(0,139,122,.08);
+  color:var(--ink);
+  font-size:12px;
+  font-weight:950;
+  outline:0;
+}
+
+.tiny-file-format:disabled{
+  opacity:.62;
+  cursor:not-allowed;
+}
+
+.tiny-file-download{
+  width:44px;
+  min-width:44px;
+  height:36px;
+  min-height:36px;
+  padding:0;
+  font-size:18px;
+  line-height:1;
+}
+
+@media(max-width:980px){
+  .tiny-file-row{
+    grid-template-columns:42px 1fr;
+  }
+
+  .tiny-file-select-wrap,
+  .tiny-file-saving{
+    justify-self:start;
+    text-align:left;
+  }
+
+  .tiny-file-download{
+    justify-self:start;
+  }
+
+  .tiny-file-progress{
+    grid-column:1 / 3;
+  }
+}
+
+
+/* Fix: custom result-row format dropdown */
+.tiny-file-select-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tiny-file-format {
+  width: 118px;
+  height: 36px;
+  padding: 0 34px 0 14px;
+  border: 1px solid rgba(0, 139, 122, 0.28);
+  border-radius: 999px;
+  background:
+    linear-gradient(45deg, transparent 50%, var(--teal) 50%) right 16px center / 6px 6px no-repeat,
+    linear-gradient(135deg, var(--teal) 50%, transparent 50%) right 11px center / 6px 6px no-repeat,
+    rgba(0, 139, 122, 0.1);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.tiny-file-format:hover {
+  border-color: var(--teal);
+  background:
+    linear-gradient(45deg, transparent 50%, var(--teal) 50%) right 16px center / 6px 6px no-repeat,
+    linear-gradient(135deg, var(--teal) 50%, transparent 50%) right 11px center / 6px 6px no-repeat,
+    rgba(0, 139, 122, 0.18);
+}
+
+.tiny-file-format:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 2px rgba(0, 139, 122, 0.18);
+}
+
+.tiny-file-format:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.tiny-file-download {
+  width: 42px;
+  min-width: 42px;
+  height: 36px;
+  min-height: 36px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

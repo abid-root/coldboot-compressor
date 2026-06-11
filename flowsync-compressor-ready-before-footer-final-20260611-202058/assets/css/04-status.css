@@ -1,0 +1,91 @@
+/* Status and empty state */
+.status-bar{
+  width:min(1280px, calc(100% - 44px));
+  margin:24px auto 30px;
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:22px;
+}
+
+.total-card,
+.tip-card{
+  min-height:88px;
+  border:1px solid var(--line);
+}
+
+.total-card{
+  padding:20px 28px;
+  background:var(--ink);
+  color:var(--paper);
+}
+
+.total-card small{
+  display:block;
+  margin-bottom:4px;
+  font-size:12px;
+  font-weight:950;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.total-card strong{
+  color:var(--acid);
+  font-size:34px;
+  line-height:1;
+}
+
+.tip-card{
+  padding:18px 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  background:rgba(255,255,255,.22);
+}
+
+html.dark .tip-card{
+  background:rgba(244,241,232,.035);
+  border-color:var(--dark-line);
+}
+
+.tip-card b{
+  text-transform:uppercase;
+  letter-spacing:.05em;
+}
+
+.upload-empty-card{
+  width:min(1080px, calc(100% - 44px));
+  margin:24px auto 42px;
+  padding:30px 34px;
+  border:1px solid rgba(0,0,0,.14);
+  background:rgba(255,255,255,.25);
+  text-align:center;
+}
+
+html.dark .upload-empty-card{
+  border-color:var(--dark-line);
+  background:rgba(244,241,232,.035);
+}
+
+.upload-empty-card h2{
+  margin:0 0 8px;
+  font-size:28px;
+  font-weight:950;
+  text-transform:uppercase;
+}
+
+.upload-empty-card p{
+  margin:0;
+  color:var(--muted);
+}
+
+html.dark .upload-empty-card p{
+  color:rgba(244,241,232,.68);
+}
+
+body.is-processing .status-bar,
+body.has-result .status-bar,
+body.is-processing .upload-empty-card,
+body.has-result .upload-empty-card{
+  display:none;
+}
