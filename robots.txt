@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abid-root.github.io/coldboot-compressor/sitemap.xml

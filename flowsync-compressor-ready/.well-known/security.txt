@@ -1,3 +1,0 @@
-Contact: https://abid-root.github.io/contact/
-Preferred-Languages: en
-Canonical: https://abid-root.github.io/coldboot-compressor-final/.well-known/security.txt

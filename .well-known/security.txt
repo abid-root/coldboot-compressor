@@ -1,0 +1,4 @@
+Contact: mailto:abid.hasan@tuta.io
+Preferred-Languages: en
+Canonical: https://abid-root.github.io/coldboot-compressor/.well-known/security.txt
+Expires: 2027-06-13T00:00:00Z
